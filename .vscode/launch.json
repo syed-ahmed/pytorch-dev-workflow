@@ -5,10 +5,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "Attach Python",
+            "type": "python",
+            "request": "attach",
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "${workspaceRoot}",
+            "port": 3000,
+            "secret": "my_secret",
+            "host": "localhost"
+        },
+        { 
+            "name": "Attach GDB",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "/opt/conda/bin/python",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "CUDA-GDB Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/half_test",
+            "program": "${workspaceFolder}/build/bin/cuda_numerics_test",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
