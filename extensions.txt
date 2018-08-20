@@ -1,0 +1,14 @@
+batisteo.vscode-django
+donjayamanne.jupyter
+donjayamanne.python-extension-pack
+kriegalex.vscode-cudacpp
+maddouri.cmake-tools-helper
+magicstack.MagicPython
+ms-python.python
+ms-vscode.cpptools
+ms-vsliveshare.vsliveshare
+PeterJausovec.vscode-docker
+twxs.cmake
+vector-of-bool.cmake-tools
+wholroyd.jinja
+zxh404.vscode-proto3
